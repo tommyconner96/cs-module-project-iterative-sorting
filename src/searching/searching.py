@@ -13,8 +13,6 @@ def linear_search(arr, target):
 
 # Write an iterative implementation of Binary Search
 def binary_search(arr, target):
-
-
     # start = the starting index of the subset of the array being searched
     start = 0
     # end = the end index of the subset

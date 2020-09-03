@@ -18,14 +18,38 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # loop thru list for all elements
-    for i in range(len(arr)):
-        for j in range(len(arr) - 1):
-            if arr[j] > arr[j+1]:
-                # swap
-                arr[j], arr[j+1] = arr[j+1], arr[j]
+    for _ in range(len(arr)):
+        # Boolean for swapped status
+        swapped = False
+        # define i, current position in the array
+        i = 0
+        # while i < length of array
+        # (logic from for loop below)
+        #         if arr[j] > arr[j+1]:
+        #           swap
+        #           set swapped to True
+        while i < (len(arr) - 1):
+            if arr[i] > arr[i+1]:
+                arr[i],arr[i+1] = arr[i+1],arr[i]
+                swapped = True
+            # increment
+            i = i+1
+
+        # IF swapped = false: stop
+        if swapped == False:
+            break
 
     return arr
+
+    # old way.
+    # loop thru list for all elements
+    # for i in range(len(arr)):
+    #     for j in range(len(arr) - 1):
+    #         if arr[j] > arr[j+1]:
+    #             # swap
+    #             arr[j], arr[j+1] = arr[j+1], arr[j]
+
+    # return arr
 
 '''
 STRETCH: implement the Counting Sort function below
